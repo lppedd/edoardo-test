@@ -15,6 +15,7 @@
 	</properties>
 
 	<modules>
+		<module>edoardo-test-common</module>
 		<module>edoardo-test-ear</module>
 		<module>edoardo-test-ejb</module>
 		<module>edoardo-test-war</module>
