@@ -1,4 +1,4 @@
-package com.edoardo.test.common.injection;
+package com.edoardo.test.common.producers;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
@@ -8,9 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @ApplicationScoped
-public class LoggerInjection {
+public class LoggerProducer {
 	@Produces
-	public Logger produceLogger(final InjectionPoint injectionPoint) {
+	public Logger logger(final InjectionPoint injectionPoint) {
 		return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass());
 	}
 }

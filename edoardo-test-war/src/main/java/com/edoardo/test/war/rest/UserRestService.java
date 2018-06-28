@@ -14,7 +14,7 @@ import com.edoardo.test.ejb.entities.User;
 import com.edoardo.test.ejb.services.UserService;
 
 @ApplicationScoped
-@Path("/users")
+@Path("users")
 public class UserRestService {
 	@Inject
 	private Logger logger;
@@ -23,8 +23,7 @@ public class UserRestService {
 	private UserService userService;
 
 	@GET
-	@Path("/all")
-	public List<User> all() {
+	public List<User> allUsers() {
 		logger.info("Invoking the service to retrieve the users list");
 		return userService.findAllUsers();
 	}
