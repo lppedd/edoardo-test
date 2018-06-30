@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Users</title>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/userController.js"></script>
+		<script src="scripts/factories/userFactory.js"></script>
+	</head>
+	<body ng-app="edoardoTest" ng-controller="userController">
+		<div ng-repeat="user in users">
+			{{user.name}}
+			{{user.surname}}
+			{{user.email}}
+		</div>
+	</body>
+</html>
