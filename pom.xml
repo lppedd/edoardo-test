@@ -30,6 +30,25 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- Modules -->
+			<dependency>
+				<groupId>com.edoardo</groupId>
+				<artifactId>test-ejb</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<type>ejb</type>
+			</dependency>
+			<dependency>
+				<groupId>com.edoardo</groupId>
+				<artifactId>test-war</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>com.edoardo</groupId>
+				<artifactId>test-common</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+
 			<!-- Container -->
 			<dependency>
 				<groupId>javax</groupId>
