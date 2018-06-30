@@ -2,7 +2,6 @@ package com.edoardo.test.war.rest;
 
 import java.util.List;
 
-import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -16,11 +15,16 @@ import com.edoardo.test.ejb.services.UserService;
 @ApplicationScoped
 @Path("users")
 public class UserRestService {
-	@Inject
-	private Logger logger;
+	private final Logger logger;
+	private final UserService userService;
 
-	@EJB
-	private UserService userService;
+	@Inject
+	public UserRestService(
+			final Logger logger,
+			final UserService userService) {
+		this.logger = logger;
+		this.userService = userService;
+	}
 
 	@GET
 	public List<User> allUsers() {

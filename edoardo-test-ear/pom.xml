@@ -37,6 +37,7 @@
 				<configuration>
 					<version>8</version>
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<generateApplicationXml>true</generateApplicationXml>
 					<modules>
 						<webModule>
 							<groupId>com.edoardo</groupId>
