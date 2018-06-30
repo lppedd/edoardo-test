@@ -24,13 +24,13 @@ public class UserServiceImpl implements UserService {
 		final User edoardo = new User();
 		edoardo.id = UUID.randomUUID().toString();
 		edoardo.name = "Edoardo";
-		edoardo.name = "Luppi";
+		edoardo.surname = "Luppi";
 		edoardo.email = "lp.edoardo@gmail.com";
 
 		final User marco = new User();
 		marco.id = UUID.randomUUID().toString();
 		marco.name = "Marco";
-		marco.name = "Rossi";
+		marco.surname = "Rossi";
 		marco.email = "marco.rossi@gmail.com";
 
 		return Arrays.asList(edoardo, marco);

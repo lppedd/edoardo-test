@@ -15,16 +15,11 @@ import com.edoardo.test.ejb.services.UserService;
 @ApplicationScoped
 @Path("users")
 public class UserRestService {
-	private final Logger logger;
-	private final UserService userService;
+	@Inject
+	private Logger logger;
 
 	@Inject
-	public UserRestService(
-			final Logger logger,
-			final UserService userService) {
-		this.logger = logger;
-		this.userService = userService;
-	}
+	private UserService userService;
 
 	@GET
 	public List<User> allUsers() {
