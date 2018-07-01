@@ -1,8 +1,8 @@
 package com.edoardo.test.war.rest;
 
 import java.util.Collections;
+import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.UUID;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericType;
@@ -35,10 +35,10 @@ public class UserRestServiceTest extends JerseyTest {
 	@Test
 	public void nonEmptyListTest() {
 		final User user = new User();
-		user.id = UUID.randomUUID().toString();
+		user.id = 1;
 		user.name = "Test name";
 		user.surname = "Test surname";
-		user.email = "Test email";
+		user.birthday = new GregorianCalendar(1994, 12, 31).getTime();
 
 		Mockito.when(userService.findAllUsers())
 				 .thenReturn(Collections.singletonList(user));

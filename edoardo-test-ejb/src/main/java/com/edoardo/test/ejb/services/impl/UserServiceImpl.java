@@ -1,8 +1,8 @@
 package com.edoardo.test.ejb.services.impl;
 
 import java.util.Arrays;
+import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.UUID;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -22,16 +22,16 @@ public class UserServiceImpl implements UserService {
 		logger.info("Retrieving the users list");
 
 		final User edoardo = new User();
-		edoardo.id = UUID.randomUUID().toString();
+		edoardo.id = 1;
 		edoardo.name = "Edoardo";
 		edoardo.surname = "Luppi";
-		edoardo.email = "lp.edoardo@gmail.com";
+		edoardo.birthday = new GregorianCalendar(1994, 12, 5).getTime();
 
 		final User marco = new User();
-		marco.id = UUID.randomUUID().toString();
+		marco.id = 2;
 		marco.name = "Marco";
 		marco.surname = "Rossi";
-		marco.email = "marco.rossi@gmail.com";
+		marco.birthday = new GregorianCalendar(1990, 4, 12).getTime();
 
 		return Arrays.asList(edoardo, marco);
 	}
