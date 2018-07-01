@@ -38,7 +38,7 @@ public class UserRestServiceTest extends JerseyTest {
 		user.id = 1;
 		user.name = "Test name";
 		user.surname = "Test surname";
-		user.birthday = new GregorianCalendar(1994, 12, 31).getTime();
+		user.birthday = new GregorianCalendar(1994, 11, 31).getTime();
 
 		Mockito.when(userService.findAllUsers())
 				 .thenReturn(Collections.singletonList(user));

@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 		edoardo.id = 1;
 		edoardo.name = "Edoardo";
 		edoardo.surname = "Luppi";
-		edoardo.birthday = new GregorianCalendar(1994, 12, 5).getTime();
+		edoardo.birthday = new GregorianCalendar(1994, 11, 5).getTime();
 
 		final User marco = new User();
 		marco.id = 2;
