@@ -3,16 +3,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Users</title>
-		<script src="scripts/angular.js"></script>
-		<script src="scripts/app.js"></script>
-		<script src="scripts/controllers/userController.js"></script>
-		<script src="scripts/factories/userFactory.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/angular.js"></script>
+		<script src="js/ui-bootstrap-2.5.0.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/userController.js"></script>
+		<script src="js/factories/userFactory.js"></script>
 	</head>
 	<body ng-app="edoardoTest" ng-controller="userController">
-		<div ng-repeat="user in users">
-			{{user.name}}
-			{{user.surname}}
-			{{user.email}}
-		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Birthday</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users">
+					<td>{{user.id}}</td>
+					<td>{{user.name}}</td>
+					<td>{{user.surname}}</td>
+					<td>{{user.birthday}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>
